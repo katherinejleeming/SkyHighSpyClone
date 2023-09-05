@@ -43,12 +43,12 @@ void UpdatePlayerMovement(float& x, float& y, float& angle, float& speed)
 {
 	if(Play::KeyDown(VK_RIGHT))
 	{
-		angle = angle + 0.1;
+		angle = angle + 0.1f;
 	}
 
 	if (Play::KeyDown(VK_LEFT))
 	{
-		angle = angle - 0.1;
+		angle = angle - 0.1f;
 	}
 
 	x = x + sin(angle) * speed;
@@ -56,15 +56,15 @@ void UpdatePlayerMovement(float& x, float& y, float& angle, float& speed)
 
 	if (Play::KeyDown(VK_UP))
 	{
-		speed = speed + 0.2;
+		speed = speed + 0.2f;
 	}
 
 	if (Play::KeyDown(VK_DOWN))
 	{
-		speed = speed * 0.9;
+		speed = speed * 0.9f;
 	}
 
-	speed = speed * 0.99;
+	speed = speed * 0.99f;
 	
 	if (Play::KeyPressed(VK_SPACE))
 	{
